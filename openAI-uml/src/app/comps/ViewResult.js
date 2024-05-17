@@ -12,7 +12,7 @@ const ViewResultPage = ({ resultText }) => {
     const result = textList.map((t) => {
       if (!flag && t.trim().startsWith("```")) {
         flag = true;
-        return `<pre class="mermaid_code>`;
+        return `<pre class="mermaid_code">`;
       } else if (flag && t.trim().startsWith("```")) {
         flag = false;
         return `</pre>`;
